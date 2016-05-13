@@ -29,7 +29,7 @@ public class ConnectFour{
 	if(ret=="")
 	    {
 		System.out.println("Not a valid input fool");
-		return getUserInput(possibleInputs);
+		
 	    } 
 	else
 	    {
