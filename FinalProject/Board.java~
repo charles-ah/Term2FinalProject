@@ -6,6 +6,11 @@ public class Board{
 	//initialize the board
     }
 
+    public String get(int row,int col)
+    {
+	return board[row][col];
+    }
+
     public boolean add(int col, String marker){
 	//attempt to add the piece to the column specified
 	//return true if successful, otherwise false
