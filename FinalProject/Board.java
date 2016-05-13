@@ -1,6 +1,6 @@
 public class Board{
 
-    private String[] board;
+    private String[][] board;
 
     public Board(){
 	//initialize the board
