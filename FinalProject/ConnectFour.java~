@@ -1,8 +1,9 @@
+import java.util.*;
 public class ConnectFour{
 
     private Board board;
 
-    public ConnectFour{
+    public ConnectFour(){
 	//initalize the game
 	board  = new Board();
 	
@@ -11,9 +12,30 @@ public class ConnectFour{
 
 	//loop until we have recieved a proper input
 	//possible inputs are found inside the array
-    public String getUserInput(String[] possibleInputs,String tile)
+    public static String getUserInput(String[] possibleInputs)
     {
-	
+	String ret = "";
+	Scanner s = new Scanner(System.in);
+	int i =0;
+	if(s.next()=="exit")
+	    {
+		return "Player forfeits";
+	    }
+	while(s.hasNext())
+	    {
+		ret = s.next(possibleInputs[i]);
+		i++;
+	    }
+	if(ret=="")
+	    {
+		System.out.println("Not a valid input fool");
+		
+	    } 
+	else
+	    {
+		return ret;
+	    }
+
     }
     
 
@@ -29,6 +51,15 @@ public class ConnectFour{
 	//otherwise repeat until move is valid
     public static void main(String[]args)
     {
-	
+	String[] possibleInputs = {"1","2","3","4"}; 
+	if(true)//Math.random()*2==0)
+	    {
+		System.out.println("You start!");
+		String input  = getUserInput(possibleInputs);
+	    }
+	else
+	    {
+		System.out.println("Computer starts!");
+	    }
     }
 }

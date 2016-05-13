@@ -1,8 +1,9 @@
+import java.util.*;
 public class ConnectFour{
 
     private Board board;
 
-    public ConnectFour{
+    public ConnectFour(){
 	//initalize the game
 	board  = new Board();
 	
@@ -11,10 +12,10 @@ public class ConnectFour{
 
 	//loop until we have recieved a proper input
 	//possible inputs are found inside the array
-    public String getUserInput(String[] possibleInputs)
+    public static String getUserInput(String[] possibleInputs)
     {
 	String ret = "";
-	Scanner s = new Scanenr(System.in);
+	Scanner s = new Scanner(System.in);
 	int i =0;
 	if(s.next()=="exit")
 	    {
@@ -51,7 +52,7 @@ public class ConnectFour{
     public static void main(String[]args)
     {
 	String[] possibleInputs = {"1","2","3","4"}; 
-	if(Math.random()*2==0)
+	if(true)//Math.random()*2==0)
 	    {
 		System.out.println("You start!");
 		String input  = getUserInput(possibleInputs);

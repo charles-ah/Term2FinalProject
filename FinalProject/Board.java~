@@ -4,6 +4,7 @@ public class Board{
 
     public Board(){
 	//initialize the board
+	board = new String[6][6];
     }
 
     public String get(int row,int col)
